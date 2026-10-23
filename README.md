@@ -1,43 +1,41 @@
 # AI Skills 工具仓库（Codex 优先）
 
-> 一个供个人学习、AI 编程协作和开源工具研究使用的仓库。整理于 2026-10-23。
+收录截图里的 **10 个 AI Skills**、为其提供支持的 **3 个配套 Skills**，以及 **GhostTrack 原项目的 Git 子模块入口**。整理于 2026-10-23。
 
-## 这里有什么？
+## 截图中的十个 Skill
 
-- **10 个 AI Skills**：来自实际 GitHub 原项目，放在 `.agents/skills/<技能名>/`。Codex 打开本仓库时可发现这些项目级 Skills（具体使用取决于 Codex 版本及运行环境）。
-- **GhostTrack**：记录官方上游地址与使用边界，**不自动运行、不复制其全部源码**。见 [GhostTrack 说明](tools/ghosttrack/README.md)。
-- **原始来源与许可证**：见 [来源表](docs/UPSTREAM.md)。
-
-## AI Skills 清单
-
-| Skill | 一句话用途 |
+| 技能 | 一句话用途 |
 | --- | --- |
-| `find-skills` | 查找适合需求的 Agent Skills |
-| `grill-me` | 持续提问，澄清需求与设计 |
-| `grill-with-docs` | 澄清需求并更新项目术语和架构决策文档 |
-| `improve-codebase-architecture` | 检查项目架构与改进方向 |
-| `agent-browser` | 协助 AI 利用浏览器自动化 CLI（需要另装 CLI） |
+| `find-skills` | 发现其他可安装的 Agent Skills |
+| `grill-me` | 通过连续追问把项目需求说清楚 |
+| `grill-with-docs` | 追问并整理术语、架构决策文档 |
+| `improve-codebase-architecture` | 检查并改进代码架构 |
+| `agent-browser` | 协助运行浏览器自动化 CLI（需另外安装软件） |
 | `tdd` | 测试驱动开发 |
-| `setup-matt-pocock-skills` | 初始化 Matt Pocock 系列 Skills 的项目约定 |
-| `frontend-design` | 指导更有辨识度的网页前端设计 |
-| `handoff` | 在 AI 会话/工具之间交接任务进度 |
-| `triage` | 分类与处理 GitHub Issues 等工作项目 |
+| `setup-matt-pocock-skills` | 初始化 Matt Pocock 系列技能的项目配置 |
+| `frontend-design` | 前端视觉与设计指导 |
+| `handoff` | 为 AI 跨会话交接保存进度 |
+| `triage` | 分类处理 GitHub Issues / PR |
 
-## 怎么用（适合初学者）
+额外包含依赖技能：`grilling`、`domain-modeling`、`codebase-design`。其中部分入口 Skill 很短，仅调用这些配套技能，所以必须一起保存。
 
-1. 在电脑上通过 Codex **打开这个 GitHub 仓库**，或先克隆到本地再进入项目目录。
-2. 查看 `.agents/skills/` 是否有以上 10 个技能文件夹。
-3. 在 Codex 对话中先让 AI 阅读对应 `SKILL.md`，例如：「请使用 grill-me 帮我问清楚这个项目需求。」
-4. 需要浏览器自动化时再单独安装 `agent-browser` CLI；只放入 Skill 定义不等于安装了浏览器运行程序。
-5. 需要 Matt Pocock 系列的 Issue / 文档工作流时，先运行 `setup-matt-pocock-skills`；它可能修改仓库文件与标签，请先审核提议。
+## 使用导航
 
-**重要区别**：Skills 是 AI 的工作指令，不等于手机 App、已经运行的软件，也不等于你在 ChatGPT 中可以直接调用一切本地程序。本仓库的 Skills 只是**项目级文件**，并未修改你的电脑或 ChatGPT 账号。
+- [技能文件：.agents/skills/](.agents/skills/) — 13 个技能文件夹，附上必要的参考文档
+- [新手使用手册：docs/START_HERE.md](docs/START_HERE.md)
+- [真实上游来源与许可证：docs/UPSTREAM.md](docs/UPSTREAM.md)
+- [安全规范：docs/SECURITY.md](docs/SECURITY.md)
+- [GhostTrack 说明：tools/ghosttrack/README.md](tools/ghosttrack/README.md)
+- [给 Codex 的仓库指令：AGENTS.md](AGENTS.md)
 
-## 安全与更新
+## 最快的使用办法
 
-- 在运行任何第三方命令、脚本或联网操作之前，先审查原始来源、依赖和权限。
-- 不要把手机号查询结果、他人隐私、账号密钥或班级个人资料提交到公开仓库。
-- 仓库目前是 **Public（公开）**，任何人都可查看里面的内容。
-- 上游内容会更新；本仓库内的 Skill 文件是录入时的快照，不会自动与上游同步。
+在 **Codex 中打开本仓库对应的本地项目目录**，然后输入：
 
-请遵守各 Skill 随附的许可证与原作者声明；本仓库只是学习与组织入口，并不宣称拥有第三方项目的作者身份。
+> 请读取 `.agents/skills/grill-me/SKILL.md`，必要时继续读取 `.agents/skills/grilling/SKILL.md`，帮我一步一步澄清需求。
+
+**注意：保存到 GitHub ≠ 已安装到你电脑或 ChatGPT 里。** GitHub 存的是文件，Codex 能否自动识别技能取决于版本及工作目录。你也可以让 AI 直接读取 `SKILL.md`。 `agent-browser` 的 CLI 和浏览器尚未安装。
+
+GhostTrack 以链接到上游指定提交的 **Git submodule（子模块）** 形式挂接，主仓库没有复制它的源码。克隆子模块前应核查上游的依赖和许可证，且不得用它追踪或骚扰他人。
+
+**本仓库为 Public（公开）**。勿上传个人手机号、令牌、账号密码、第三人的私密资料或班级个人信息。

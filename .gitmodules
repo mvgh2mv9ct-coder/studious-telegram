@@ -1,0 +1,3 @@
+[submodule "tools/ghosttrack/source"]
+	path = tools/ghosttrack/source
+	url = https://github.com/HunxByts/GhostTrack.git
