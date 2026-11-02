@@ -1,3 +1,21 @@
 [submodule "tools/ghosttrack/source"]
 	path = tools/ghosttrack/source
 	url = https://github.com/HunxByts/GhostTrack.git
+[submodule "tools/ai-extensions/diagram-design"]
+	path = tools/ai-extensions/diagram-design
+	url = https://github.com/cathrynlavery/diagram-design.git
+[submodule "tools/ai-extensions/windows-mcp"]
+	path = tools/ai-extensions/windows-mcp
+	url = https://github.com/CursorTouch/Windows-MCP.git
+[submodule "tools/ai-extensions/openmontage"]
+	path = tools/ai-extensions/openmontage
+	url = https://github.com/calesthio/OpenMontage.git
+[submodule "tools/ai-extensions/claude-mem"]
+	path = tools/ai-extensions/claude-mem
+	url = https://github.com/thedotmack/claude-mem.git
+[submodule "tools/ai-extensions/knowledge-work-plugins"]
+	path = tools/ai-extensions/knowledge-work-plugins
+	url = https://github.com/anthropics/knowledge-work-plugins.git
+[submodule "tools/ai-extensions/free-claude-code"]
+	path = tools/ai-extensions/free-claude-code
+	url = https://github.com/Alishahryar1/free-claude-code.git
